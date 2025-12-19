@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/AnaLTStray/teste-ebac-ui#readme",
   "dependencies": {
+    "@faker-js/faker": "^10.1.0",
     "cypress": "^13.6.0"
   }
 }

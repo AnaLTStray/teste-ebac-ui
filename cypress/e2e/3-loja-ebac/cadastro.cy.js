@@ -21,4 +21,11 @@ describe('Funcionalidade: Cadastro' , () => {
         cy.get('.woocommerce-Button').click()
         cy.get('.woocommerce-message').should('contain' , 'Detalhes da conta modificados com sucesso.')
     });
+
+    it('Deve completar o cadastro completo com sucesso - usando comando customizado', () => {
+        cy.get('.woocommerce-privacy-policy-text > p').should('contain' , 'Seus dados pessoais serão usados para apoiar sua experiência em todo este site, para gerenciar o acesso à sua conta e para outros fins descritos em nossa política de privacidade.')
+        cy.preCadastro (faker.internet.email(), 'senhateste', faker.person.firstName (), faker.person.lastName ())
+        cy.get('.woocommerce-message').should('contain' , 'Detalhes da conta modificados com sucesso.')
+    });
+
 });
